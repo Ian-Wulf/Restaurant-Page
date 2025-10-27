@@ -1,5 +1,5 @@
 import Noodles from '../assets/noodles.png';
-
+import reviewTxt from './review.txt';
 
 function displayHome() {
 
@@ -22,7 +22,7 @@ function displayHome() {
     reviewContainer.classList.add('review-container');
     
     const review = document.createElement('p');
-    review.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+    review.textContent = reviewTxt;
     review.id = "review";
 
     const reviewAuthor = document.createElement('p');
