@@ -1,5 +1,12 @@
 :root {
     --box-shadow-color: rgb(90, 75, 59);
+    --header-font: 'Japan Ramen Regular';
+    --font-color-1: rgb(246, 150, 30);
+}
+
+@font-face {
+    font-family: 'Japan Ramen Regular';
+    src: url('../fonts/japan-ramen.regular.otf');
 }
 
 * {
@@ -9,8 +16,8 @@
 }
 
 body {
-    height: 100vh;
     background-color: bisque;
+    font-family: "Open Sans", sans-serif;
 }
 
 header {
@@ -30,6 +37,7 @@ nav {
 }
 
 button {
+    font-family: var(--header-font);
     background-color: bisque;
     border-bottom: none;
     border-radius: 5px 5px 0px 0px;
@@ -43,10 +51,11 @@ button:hover {
     background-color: rgb(211, 121, 11);
 }
 
-#content {
+p {
+    color: var(--font-color-1);
+}
 
-    height: 100%;
-    width: 100%;
+#content {
     display: flex;
     justify-content: center;
 
@@ -63,12 +72,12 @@ button:hover {
     width: 500px;
     background-color: bisque;
     border-radius: 20px;
-    padding-top: 2rem;
+    padding: 2rem 0rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-/* Home Page Styles */
+/* Home Page */
 
 img#logo {
     width: 300px;
@@ -77,11 +86,32 @@ img#logo {
 
 #restaurantName {
     padding-bottom: 2rem;
+    font-family: var(--header-font);
 }
 
 .review-container {
+    font-size: 1.2rem;
     width: 20rem;
     display: grid;
     grid-template-rows: 2fr 1fr;
     gap: 1rem;    
+}
+
+.hours-container {
+    width: 20rem;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1rem;
+    border: solid 3px var(--box-shadow-color);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.hours-header {
+    font-family: var(--header-font);
+}
+
+.day {
+    justify-self: center;
+    font-size: 1.3rem;
 }

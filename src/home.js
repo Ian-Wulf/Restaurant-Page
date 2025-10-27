@@ -1,23 +1,26 @@
 import Noodles from '../assets/noodles.png';
 import reviewTxt from './review.txt';
+import hoursData from './hours.json';
 
 function displayHome() {
 
     const content = document.getElementById('content');
     const contentContainer = document.createElement('div');
     contentContainer.classList.add('contentContainer');
-
+    
+    // LOGO
     const myImg = new Image();
     myImg.src = Noodles;
     myImg.id = "logo";
 
     contentContainer.appendChild(myImg);
-
+    // NAME
     const restaurantName = document.createElement('h1');
     restaurantName.innerHTML = "Tojo's Noodle Bar";
     restaurantName.id = "restaurantName";
-    contentContainer.appendChild(restaurantName);
 
+    contentContainer.appendChild(restaurantName);
+    // REVIEW
     const reviewContainer = document.createElement('div');
     reviewContainer.classList.add('review-container');
     
@@ -33,6 +36,27 @@ function displayHome() {
     reviewContainer.appendChild(reviewAuthor);
 
     contentContainer.appendChild(reviewContainer);
+
+    // HOURS
+    const hoursContainer = document.createElement('div');
+    hoursContainer.classList.add('hours-container');
+
+    const hoursHeader = document.createElement('h2');
+    hoursHeader.innerHTML = "Hours";
+    hoursHeader.classList.add('hours-header');
+    hoursContainer.appendChild(hoursHeader);
+
+    for(const key in hoursData) {
+        if(hoursData.hasOwnProperty(key)) {
+            const day = document.createElement('p');
+            day.classList.add('day');
+            day.innerHTML = `${key}: ${hoursData[key]}`;
+            hoursContainer.appendChild(day);
+        }
+    }
+
+    contentContainer.appendChild(hoursContainer);
+    
     content.appendChild(contentContainer);
 }
 
