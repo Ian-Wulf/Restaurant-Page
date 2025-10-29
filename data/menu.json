@@ -1,0 +1,26 @@
+[
+    {
+        "image": "shoyu-ramen.jpg",
+        "name": "Shoyu Ramen Noodles",
+        "description": "Classic ramen noodle dish with a soy sauce-based broth. Features a chicken wings and dashi base and adheres closely to traditional elements.",
+        "price": "$12.99"
+    },
+    {
+        "image": "kitsune-udon.webp",
+        "name": "Kitsune Udon (Udon Noodles with Deep Fried Tofu)",
+        "description": "Thick udon noodles, savory dashi broth, and seasoned aburaage.",
+        "price": "$11.99"
+    },
+    {
+        "image": "duck-soba.jpg",
+        "name": "Duck Soba Noodle Soup (Kamo Nanban Soba)",
+        "description": "Soba noodle dish with duck meat and chunky Japanese leeks.",
+        "price": "$13.99"
+    },
+    {
+        "image": "shio-ramen.jpg",
+        "name": "Chicken Shio Ramen (Salt Base Broth)",
+        "description": "Traditional ramen noodle dish  with ground chicken and a clear and light broth",
+        "price": "$11.99"
+    }
+]

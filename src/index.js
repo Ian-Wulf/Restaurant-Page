@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
     const menuButton = document.querySelector('.menu');
     const aboutButton = document.querySelector('.about');
 
-    displayHome(); // Display Home tab initially
-
+    // displayHome(); 
+    // displayMenu();
+    displayAbout();
+    
     homeButton.addEventListener('click', function() {
         const content = document.getElementById('content');
         content.innerHTML = "";
