@@ -1,5 +1,5 @@
 import Noodles from '../assets/noodles.png';
-import reviewTxt from './review.txt';
+import reviewTxt from '../data/review.txt';
 import hoursData from '../data/hours.json';
 
 function displayHome() {
