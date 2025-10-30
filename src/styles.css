@@ -51,11 +51,31 @@ button {
     border: 3px solid var(--woody-brown);
     border-bottom: none;
     border-radius: 5px 5px 0px 0px;
+
+    position: relative;
 }
 
 button:hover {
     cursor: pointer;
     background-color: rgb(211, 121, 11);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--woody-brown);
+    mask: url("../assets/chopsticks.svg") no-repeat center / contain;
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+button:hover::after {
+    opacity: 1;
 }
 
 p {
